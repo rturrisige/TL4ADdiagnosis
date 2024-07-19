@@ -12,7 +12,9 @@ Otherwise, ResNet models pre-trained on ImageNet and adapted to 3D processing ca
 
 - GA_feature_extraction.py: uses ADnet or ResNet-based models as feature extractor for 3D MRI scans
 - GA_classification.py: load the extracted features and performs AD diagnosis based on SVM, Knn, and RF classifiers
-- GA_utilities.py: contains utility functions for feature extraction and classification
+- GA_utilities.py: contains utility functions for feature extraction and classification. 
+  The function 'feature_data_preparation' assumes data being grouped in AD and CN sets, labelled as 2 and 0 respecitvely.
+  Modified this function for customized usage.
 - GA_plot_functions.py: contains useful functions to plot results.
 
 ### Usage example
