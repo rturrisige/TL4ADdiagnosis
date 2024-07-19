@@ -15,6 +15,7 @@ tonpy = lambda x: x.detach().cpu().numpy()
 def extract_embedding(model, data_dir, saver_dir):
     device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 
+    # Check if chosen model is allowed.
     models_A = ['ADnet', 'ADnetEx']
     models_B = ['ResNet18', 'ResNet50', 'ResNet101']
     if model not in models_A + models_B:

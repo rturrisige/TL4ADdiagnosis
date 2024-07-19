@@ -15,6 +15,13 @@ torch.cuda.empty_cache()
 
 
 def feature_data_preparation(extractor, feature_dir):
+    """
+    This function load extracted features for AD and CN groups.
+    It assumes that CN files are labelled with 0, and AD files are labelled with 2.
+    :param extractor: model used as feature extractor, type=str
+    :param feature_dir: path to directory with extracted features, type=str
+    :return: numpy.array, numpy.array
+    """
     models_A = ['ADnet', 'ADnetEx']
     models_B = ['ResNet18', 'ResNet50', 'ResNet101']
     if extractor not in models_A + models_B:

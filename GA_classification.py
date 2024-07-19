@@ -21,7 +21,6 @@ def run_classifiers(extractor, feature_dir, saver_path, augmentation=False):
         os.makedirs(saver_path)
 
     labels = ['CN', 'AD']
-
     logfile = open(saver_path + '/gridsearch.txt', 'w')
 
     # K-fold cross validation

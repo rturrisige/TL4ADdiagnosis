@@ -13,6 +13,7 @@ orig_cmap = plt.cm.Blues
 colors = orig_cmap(np.linspace(0.25, 1))
 cmap = matplotlib.colors.LinearSegmentedColormap.from_list('mycmap', colors)
 
+
 # ######################
 #     PLOTTING       ##
 # ######################
